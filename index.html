@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Sign In</h2>
+    <form action="#">
+      First name:<br>
+      <input type="text" id="firstname" name="firstname" value="Mickey">
+      <br>
+      Last name:<br>
+      <input type="text" id="lastname" name="lastname" value="Mouse">
+      <br><br>
+      <input type="radio" id="male" name="gender" value="male" checked> Male<br>
+      <input type="radio" id="female" name="gender" value="female"> Female<br>
+      <input type="radio" id="other" name="gender" value="other"> Other <br><br>
+      <button onclick="showWelcomeStatus()">submit</button>
+    </form>
+    <script>
+      function showWelcomeStatus() {
+        var myWindow = window.open("", "_self");
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+
+        myWindow.document.write("<p> Registration succeful welcome " + firstname + lastname + "</p>");
+      }
+    </script>
+  </body>
+</html>
